@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="10sp">
+    <!--  android:orientation="vertical" 을써야 밑 EditText 시 정상적 수직으로 출력해줌  -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/activity_main__editTextNum1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="숫자를 입력해주세요"
+            android:inputType="numberDecimal" />
+        <!--   android:id="@+id/원하는 명칭"  -->
+        <!--  android:inputType="numberDecimal" 10진수 정수  -->
+        <EditText
+            android:id="@+id/activity_main__editTextNum2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="숫자를 입력해주세요"
+            android:inputType="numberDecimal" />
+
+
+        <TextView
+            android:id="@+id/activity_main__textViewRs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="결과 : "
+            android:textSize="20sp" />
+        <!--    핸드폰 자체의 글씨크기가 반영되는 sp단위-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnAddClicked"
+            android:text="더하기" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:onClick="btnMinusClicked"
+            android:text="빼기" />
+        <!--        android:layout_weight="1" 너비가 최대한 늘어난다 -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:onClick="btnCrearClicked"
+            android:text="지우기" />
+        <!--        css처럼 마진을 쓸 수 있는데 단위가 dp를 쓴다 -->
+
+    </LinearLayout>
+
+</LinearLayout>
